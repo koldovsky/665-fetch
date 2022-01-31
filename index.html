@@ -22,6 +22,7 @@
                     <a href="#products" class="header__nav-menu-item">Products</a>
                     <a href="#contacts" class="header__nav-menu-item">Contacts</a>
                     <a href="#cart" class="header__nav-menu-item">Cart</a>
+                    <a href="#" class="header__nav-menu-item clock"></a>
                 </div>
             </nav>
             <div class="header__banner">
@@ -33,60 +34,12 @@
     <main>
         <section class="products container">
             <h2>Product List</h2>
-            <div class="products__list">
-                <article class="product">
-                    <img class="product__img" src="img/baby-yoda.svg" alt="Baby Yoda">
-                    <h3 class="product__title">Baby Yoda</h3>
-                    <p class="product__description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima voluptatem cumque quam
-                        ipsum in molestiae eum harum eaque! Nulla veniam animi, ipsam molestiae laboriosam voluptates
-                        autem deleniti illum quas!
-                    </p>
-                    <div class="product__buttons">
-                        <button class="button button-card">Info</button>
-                        <button class="button button-card">Buy</button>
-                    </div>
-                </article>
-                <article class="product">
-                    <img class="product__img" src="img/banana.svg" alt="Banana">
-                    <h3 class="product__title">Banana</h3>
-                    <p class="product__description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima voluptatem cumque quam
-                        ipsum in molestiae eum harum eaque! Nulla veniam animi, ipsam molestiae laboriosam voluptates
-                        autem deleniti illum quas!
-                    </p>
-                    <div class="product__buttons">
-                        <button class="button button-card">Info</button>
-                        <button class="button button-card">Buy</button>
-                    </div>
-                </article>
-                <article class="product">
-                    <img class="product__img" src="img/girl.svg" alt="Girl">
-                    <h3 class="product__title">Girl</h3>
-                    <p class="product__description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima voluptatem cumque quam
-                        ipsum in molestiae eum harum eaque! Nulla veniam animi, ipsam molestiae laboriosam voluptates
-                        autem deleniti illum quas!
-                    </p>
-                    <div class="product__buttons">
-                        <button class="button button-card">Info</button>
-                        <button class="button button-card">Buy</button>
-                    </div>
-                </article>
-                <article class="product">
-                    <img class="product__img" src="img/viking.svg" alt="Viking">
-                    <h3 class="product__title">Viking</h3>
-                    <p class="product__description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima voluptatem cumque quam
-                        ipsum in molestiae eum harum eaque! Nulla veniam animi, ipsam molestiae laboriosam voluptates
-                        autem deleniti illum quas!
-                    </p>
-                    <div class="product__buttons">
-                        <button class="button button-card">Info</button>
-                        <button class="button button-card">Buy</button>
-                    </div>
-                </article>
+            <div class="products__carousel">
+                <button class="products__carousel-back">←</button>
+                <div class="products__carousel-slide-container"></div>
+                <button class="products__carousel-forward">→</button>
             </div>
+            <div class="products__list"></div>
         </section>
     </main>
     <footer id="contacts" class="footer container">
@@ -98,6 +51,10 @@
           <button class="button button-card">Submit</button>
         </form>
     </footer>
+    <script src="js/clock.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/product-list.js"></script>
+    <script src="js/products-carousel.js"></script>
 </body>
 
 </html>

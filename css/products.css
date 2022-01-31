@@ -1,3 +1,21 @@
+.products__carousel {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+@media (min-width: 640px) {
+    .products__carousel-slide-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 960px) {
+    .products__carousel-slide-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 .product {
     border: 1px solid var(--main-color);
     padding: 5px;
