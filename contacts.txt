@@ -1,0 +1,8 @@
+{}
+{"name":"John","email":"john@wall.com"}
+{}
+{"name":"Ivan","email":"mail@gmail.com"}
+{"name":"Здоров","email":"jsdfsdhuj@gmail.com"}
+{"name":"Zhenya","email":"evzickabur@gmail.com"}
+{"name":"Name","email":"user@email.com"}
+{"name":"Daddy ","email":"fatdaddy@gmail.com"}

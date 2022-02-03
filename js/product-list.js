@@ -1,38 +1,35 @@
 (function() {
 
-    const products = [
-        {
-            id: "1",
-            title: "Baby Yoda",
-            imgUrl: "img/baby-yoda.svg",
-            description: "Lorem ipsum .....",
-            price: 10.99
-        },
-        {
-            id: "2",
-            title: "Banana",
-            imgUrl: "img/banana.svg",
-            description: "Lorem ipsum .....",
-            price: 9.99
-        },
-        {
-            id: "3",
-            title: "Girl",
-            imgUrl: "img/girl.svg",
-            description: "Lorem ipsum .....",
-            price: 8.99
-        },
-        {
-            id: "4",
-            title: "Viking",
-            imgUrl: "img/viking.svg",
-            description: "Lorem ipsum .....",
-            price: 6.99
-        }
-    ];
+    let rate = 1;
+    let products;
 
-    function renderProducts(products) {
+    async function loadProducts() {
+        const response = await fetch('products.json');
+        products = await response.json();
+        renderProducts();
+    }
+
+    // function loadProducts() {
+    //     fetch('products.json')
+    //      .then( response => response.json() )
+    //      .then( products => renderProducts(products) );
+    // }
+
+    // function loadProductsXHR() {
+    //     const xhr = new XMLHttpRequest();
+    //     xhr.onreadystatechange = function() {
+    //         if (xhr.readyState === 4 && xhr.status === 200 ) {
+    //             const products = JSON.parse(xhr.responseText);
+    //             renderProducts(products);
+    //         }
+    //     }
+    //     xhr.open('get', 'products.json', true);
+    //     xhr.send();
+    // }
+
+    function renderProducts() {
         const productsContainer = document.querySelector('.products__list');
+        productsContainer.innerHTML = '';
         for (const product of products) {
             productsContainer.innerHTML += `
                 <article class="product">
@@ -41,11 +38,21 @@
                     <p class="product__description">${product.description}</p>
                     <div class="product__buttons">
                         <button class="button button-card">Info</button>
-                        <button class="button button-card">${product.price} - Buy</button>
+                        <button class="button button-card">${(product.price * rate).toFixed(2)} - Buy</button>
                     </div>
                 </article>`;
         }
     }
 
-    renderProducts(products);
+    document.querySelector('.convert').addEventListener('click', convertCurrency);
+
+    async function convertCurrency() {
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        const currencies = await response.json();
+        const convertTo = document.querySelector('.currency').value;
+        rate = currencies.rates[convertTo];
+        renderProducts();
+    }
+
+    loadProducts();
 })();

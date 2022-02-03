@@ -39,22 +39,46 @@
                 <div class="products__carousel-slide-container"></div>
                 <button class="products__carousel-forward">→</button>
             </div>
+            <div>
+                <input type="text" class="currency" value="USD">
+                <button class="convert">Convert</button>
+            </div>
             <div class="products__list"></div>
         </section>
     </main>
     <footer id="contacts" class="footer container">
         <h2>Contact Us</h2>
         <iframe id="gmap_canvas" src="https://maps.google.com/maps?ll=28.5449756,77.1904397&q=Indian Institute of Technology Delhi&t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        <form action="" class="footer__contacts">
-          <input type="text" name="name" placeholder="name" />
-          <input type="email" name="email" placeholder="email" />
-          <button class="button button-card">Submit</button>
-        </form>
+        <form class="contact-form-formspree" action="https://formspree.io/YOUR_ADDRESS" method="POST">
+            <label
+              >Your name:
+              <input type="text" name="user-name" placeholder="User Name" />
+            </label>
+            <label
+              >Your email:
+              <input type="email" name="user-email" placeholder="User Email" />
+            </label>
+            <input type="submit" />
+          </form>
+        <form class="contact-form-nodejs" action="contact" method="POST">
+            <label
+              >Your name:
+              <input type="text" name="user-name" placeholder="User Name" />
+            </label>
+            <label
+              >Your email:
+              <input type="email" name="user-email" placeholder="User Email" />
+            </label>
+            <input type="submit" />
+          </form>
+          <p class="contact-form-status"></p>
     </footer>
     <script src="js/clock.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/product-list.js"></script>
     <script src="js/products-carousel.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/contact-form-formspree.js"></script>
 </body>
 
 </html>

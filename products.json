@@ -1,0 +1,31 @@
+[
+    {
+       "id":"1",
+       "title":"Baby Yoda",
+       "imgUrl":"img/baby-yoda.svg",
+       "description":"Lorem ipsum .....",
+       "price":10.99
+    },
+    {
+       "id":"2",
+       "title":"Banana",
+       "imgUrl":"img/banana.svg",
+       "description":"Lorem ipsum .....",
+       "price":9.99
+    },
+    {
+       "id":"3",
+       "title":"Girl",
+       "imgUrl":"img/girl.svg",
+       "description":"Lorem ipsum .....",
+       "price":8.99
+    },
+    {
+       "id":"4",
+       "title":"Viking",
+       "imgUrl":"img/viking.svg",
+       "description":"Lorem ipsum .....",
+       "price":6.99
+    }
+ ]
+ 
